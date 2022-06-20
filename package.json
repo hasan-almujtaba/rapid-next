@@ -16,12 +16,14 @@
     "@mantine/modals": "^4.2.9",
     "@mantine/next": "^4.2.9",
     "@mantine/notifications": "^4.2.9",
+    "axios": "^0.27.2",
     "cookies-next": "^2.0.4",
     "dayjs": "^1.11.3",
     "next": "12.1.6",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-icons": "^4.4.0",
+    "react-query": "^3.39.1",
     "zustand": "4.0.0-rc.1"
   },
   "devDependencies": {

@@ -7,12 +7,19 @@ import {
 } from '@mantine/core'
 import { useState } from 'react'
 import { getCookie, setCookies } from 'cookies-next'
+import { Hydrate, QueryClient, QueryClientProvider } from 'react-query'
+import { ReactQueryDevtools } from 'react-query/devtools'
 
 const App = ({
   Component,
   pageProps,
   preferredColorScheme,
 }: AppPropsWithLayout & { preferredColorScheme: ColorScheme }) => {
+  /**
+   * React Query Configuration
+   */
+  const [queryClient] = useState(() => new QueryClient())
+
   /**
    * Use the layout defined at the page level, if available
    */
@@ -32,18 +39,23 @@ const App = ({
   }
 
   return (
-    <ColorSchemeProvider
-      colorScheme={colorScheme}
-      toggleColorScheme={toggleColorScheme}
-    >
-      <MantineProvider
-        withGlobalStyles
-        theme={{ colorScheme }}
-        withNormalizeCSS
-      >
-        {getLayout(<Component {...pageProps} />)}
-      </MantineProvider>
-    </ColorSchemeProvider>
+    <QueryClientProvider client={queryClient}>
+      <Hydrate state={pageProps.dehydratedState}>
+        <ColorSchemeProvider
+          colorScheme={colorScheme}
+          toggleColorScheme={toggleColorScheme}
+        >
+          <MantineProvider
+            withGlobalStyles
+            theme={{ colorScheme }}
+            withNormalizeCSS
+          >
+            {getLayout(<Component {...pageProps} />)}
+          </MantineProvider>
+        </ColorSchemeProvider>
+      </Hydrate>
+      <ReactQueryDevtools />
+    </QueryClientProvider>
   )
 }
 

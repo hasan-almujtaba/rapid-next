@@ -1,3 +1,10 @@
 {
-  "cSpell.words": ["Mantine"]
+  "cSpell.words": ["Mantine"],
+  "todohighlight.keywords": [
+    {
+      "text": "WARNING:",
+      "backgroundColor": "#e74c3c",
+      "color": "#fff"
+    }
+  ]
 }
