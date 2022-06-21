@@ -11,7 +11,7 @@ import {
   useMantineColorScheme,
   Button,
 } from '@mantine/core'
-import { DefaultLayout } from '../../types/default-layout.interface'
+import { DefaultLayout } from '../../types/layout'
 import { BsSunFill, BsMoonFill } from 'react-icons/bs'
 
 const DefaultLayout = ({ children }: DefaultLayout) => {

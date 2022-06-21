@@ -1,5 +1,5 @@
 import { GetServerSidePropsContext } from 'next'
-import { AppPropsWithLayout } from '../types/layout.type'
+import { AppPropsWithLayout } from '../types/layout'
 import {
   MantineProvider,
   ColorSchemeProvider,

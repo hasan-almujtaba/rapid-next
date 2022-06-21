@@ -1,4 +1,4 @@
-import { NextPageWithLayout } from '../types/layout.type'
+import { NextPageWithLayout } from '../types/layout'
 import DefaultLayout from '../components/layouts/default'
 import { ReactElement, useEffect, useState } from 'react'
 import useStore from '../store'
