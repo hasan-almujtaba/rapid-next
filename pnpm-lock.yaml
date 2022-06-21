@@ -19,7 +19,6 @@ specifiers:
   eslint: 8.17.0
   eslint-config-next: 12.1.6
   eslint-config-prettier: ^8.5.0
-  eslint-plugin-react-hooks: ^4.6.0
   next: 12.1.6
   prettier: 2.7.0
   react: 18.2.0
@@ -56,7 +55,6 @@ devDependencies:
   eslint: 8.17.0
   eslint-config-next: 12.1.6_qwqcuvhue6diaz4jqbkm5dp3pa
   eslint-config-prettier: 8.5.0_eslint@8.17.0
-  eslint-plugin-react-hooks: 4.6.0_eslint@8.17.0
   prettier: 2.7.0
   typescript: 4.7.3
 
