@@ -9,12 +9,9 @@ import createExample from './example'
  */
 const useStore = create<Store>()(
   devtools(
-    persist(
-      (set, get) => ({
-        ...createExample(set, get),
-      }),
-      { name: 'next-zustand' }
-    )
+    persist((...a) => ({
+      ...createExample(...a),
+    }))
   )
 )
 

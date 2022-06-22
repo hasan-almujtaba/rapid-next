@@ -1,10 +1,9 @@
-import { GetState, SetState } from 'zustand'
-import { Store } from '../types/store'
+import { StoreCreator } from '../types/store'
 
-const createExample = (set: SetState<Store>, get: GetState<Store>) => ({
+const createExample: StoreCreator = (set) => ({
   count: 0,
   increment: () => {
-    set((prev) => ({ count: prev.count + 1 }))
+    set((prev) => ({ count: prev.count + 1 }), false, 'count/increment')
   },
 })
 
