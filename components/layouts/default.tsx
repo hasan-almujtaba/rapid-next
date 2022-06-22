@@ -81,17 +81,12 @@ const DefaultLayout = ({ children }: DefaultLayout) => {
             <Button
               variant="subtle"
               color={colorScheme === 'dark' ? 'yellow' : 'dark'}
+              onClick={() => toggleColorScheme()}
             >
               {colorScheme === 'dark' ? (
-                <BsSunFill
-                  size="24"
-                  onClick={() => toggleColorScheme()}
-                />
+                <BsSunFill size="24" />
               ) : (
-                <BsMoonFill
-                  size="24"
-                  onClick={() => toggleColorScheme()}
-                />
+                <BsMoonFill size="24" />
               )}
             </Button>
           </div>
