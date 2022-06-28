@@ -6,6 +6,7 @@ import { Affix, Box, Button, Text } from '@mantine/core'
 import { dehydrate, QueryClient } from 'react-query'
 import Head from 'next/head'
 import FeatureList from '../components/features/FeatureList'
+import Link from 'next/link'
 
 const Home: NextPageWithLayout = () => {
   /**
@@ -43,6 +44,21 @@ const Home: NextPageWithLayout = () => {
       </Box>
 
       <FeatureList />
+
+      <Link href="/example">
+        <Text
+          sx={() => ({
+            cursor: 'pointer',
+            textAlign: 'center',
+            marginTop: '10px',
+            '&:hover': {
+              textDecorationLine: 'underline',
+            },
+          })}
+        >
+          See example in action
+        </Text>
+      </Link>
 
       <Affix position={{ bottom: 25, right: 20 }}>
         <Button
