@@ -8,6 +8,7 @@ const FeatureCard = ({ text }: Feature) => {
         borderRadius: '4px',
         margin: 'auto',
         [theme.fn.largerThan('md')]: { width: '384px' },
+        width: '100%',
         border: `1px solid ${
           theme.colorScheme === 'dark' ? '#8e9199' : '#74777f'
         }`,
