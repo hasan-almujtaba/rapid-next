@@ -25,8 +25,11 @@ const FeatureList = () => {
           gap: '10px',
         })}
       >
-        {features.map((text: string) => (
-          <FeatureCard text={text} />
+        {features.map((text: string, id: number) => (
+          <FeatureCard
+            text={text}
+            key={id}
+          />
         ))}
       </Box>
     </Box>

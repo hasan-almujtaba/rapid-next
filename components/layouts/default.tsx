@@ -10,7 +10,6 @@ import {
   useMantineTheme,
   useMantineColorScheme,
   Button,
-  Box,
 } from '@mantine/core'
 import { DefaultLayout } from '../../types/layout'
 import { BsSunFill, BsMoonFill, BsGithub } from 'react-icons/bs'
