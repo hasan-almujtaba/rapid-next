@@ -2,25 +2,61 @@ import { NextPageWithLayout } from '../types/layout'
 import DefaultLayout from '../components/layouts/default'
 import { ReactElement, useEffect, useState } from 'react'
 import useStore from '../store'
-import { Button } from '@mantine/core'
+import { Affix, Box, Button, Text } from '@mantine/core'
 import { dehydrate, QueryClient } from 'react-query'
-import { fetchPosts } from '../apis/post'
+import Head from 'next/head'
+import FeatureList from '../components/features/FeatureList'
 
 const Home: NextPageWithLayout = () => {
+  /**
+   * Bind state from zustand
+   */
   const countState = useStore((state) => state.count)
   const incrementCountState = useStore((state) => state.increment)
 
+  /**
+   * Local state
+   */
   const [count, setCount] = useState(0)
 
+  /**
+   * Set data from state to local state on mounted
+   */
   useEffect(() => {
     setCount(countState)
   }, [countState])
 
   return (
-    <div>
-      <div>{count}</div>
-      <Button onClick={incrementCountState}>Increment</Button>
-    </div>
+    <>
+      <Head>
+        <title>Home</title>
+      </Head>
+      <Box
+        sx={() => ({
+          textAlign: 'center',
+        })}
+      >
+        <h1>Next Starter</h1>
+        <Text sx={() => ({ fontStyle: 'italic' })}>
+          Opinionated react starter built on top of Next JS
+        </Text>
+      </Box>
+
+      <FeatureList />
+
+      <Affix position={{ bottom: 25, right: 20 }}>
+        <Button
+          onClick={incrementCountState}
+          radius={100}
+          sx={() => ({
+            height: '60px',
+            width: '60px',
+          })}
+        >
+          {count}
+        </Button>
+      </Affix>
+    </>
   )
 }
 
@@ -34,8 +70,6 @@ Home.getLayout = (page: ReactElement) => {
  */
 export const getStaticProps = async () => {
   const queryClient = new QueryClient()
-
-  await queryClient.prefetchQuery('posts', () => fetchPosts())
 
   return {
     props: {

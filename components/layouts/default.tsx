@@ -10,9 +10,11 @@ import {
   useMantineTheme,
   useMantineColorScheme,
   Button,
+  Box,
 } from '@mantine/core'
 import { DefaultLayout } from '../../types/layout'
-import { BsSunFill, BsMoonFill } from 'react-icons/bs'
+import { BsSunFill, BsMoonFill, BsGithub } from 'react-icons/bs'
+import Link from 'next/link'
 
 const DefaultLayout = ({ children }: DefaultLayout) => {
   /**
@@ -42,7 +44,12 @@ const DefaultLayout = ({ children }: DefaultLayout) => {
           hidden={!opened}
           width={{ sm: 200, lg: 300 }}
         >
-          <Text>Application navbar</Text>
+          <MediaQuery
+            largerThan="md"
+            styles={{ display: 'none' }}
+          >
+            <Button leftIcon={<BsGithub />}>View on Github</Button>
+          </MediaQuery>
         </Navbar>
       }
       footer={
@@ -50,7 +57,7 @@ const DefaultLayout = ({ children }: DefaultLayout) => {
           height={60}
           p="md"
         >
-          Application footer
+          Footer
         </Footer>
       }
       header={
@@ -74,9 +81,26 @@ const DefaultLayout = ({ children }: DefaultLayout) => {
               />
             </MediaQuery>
 
-            <Text>Application header</Text>
+            <Link href="/">
+              <Text sx={() => ({ cursor: 'pointer' })}>Next Starter</Text>
+            </Link>
 
             <div style={{ flexGrow: 1 }}></div>
+
+            <MediaQuery
+              smallerThan="lg"
+              styles={{ display: 'none' }}
+            >
+              <Button
+                variant="subtle"
+                leftIcon={<BsGithub />}
+                sx={() => ({
+                  marginRight: '10px',
+                })}
+              >
+                View on Github
+              </Button>
+            </MediaQuery>
 
             <Button
               variant="subtle"
