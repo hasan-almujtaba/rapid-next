@@ -1,6 +1,6 @@
 {
   "parser": "@typescript-eslint/parser",
-  "plugins": ["@typescript-eslint", "react-hooks"],
+  "plugins": ["@typescript-eslint"],
   "extends": [
     "plugin:@typescript-eslint/recommended",
     "next/core-web-vitals",
