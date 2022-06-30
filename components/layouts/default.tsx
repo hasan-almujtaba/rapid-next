@@ -47,7 +47,14 @@ const DefaultLayout = ({ children }: DefaultLayout) => {
             largerThan="md"
             styles={{ display: 'none' }}
           >
-            <Button leftIcon={<BsGithub />}>View on Github</Button>
+            <Button<'a'>
+              component="a"
+              target="_blank"
+              href="https://github.com/hasan-almujtaba/next-starter"
+              leftIcon={<BsGithub />}
+            >
+              View on Github
+            </Button>
           </MediaQuery>
         </Navbar>
       }
@@ -90,12 +97,15 @@ const DefaultLayout = ({ children }: DefaultLayout) => {
               smallerThan="lg"
               styles={{ display: 'none' }}
             >
-              <Button
+              <Button<'a'>
+                component="a"
+                href="https://github.com/hasan-almujtaba/next-starter"
                 variant="subtle"
                 leftIcon={<BsGithub />}
                 sx={() => ({
                   marginRight: '10px',
                 })}
+                target="_blank"
               >
                 View on Github
               </Button>
