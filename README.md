@@ -1,34 +1,73 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Next Starter
 
-## Getting Started
+React with Next JS configured out of the box for building any type of website with clean code and better Developer Experience
 
-First, run the development server:
+## Live Demo
+
+[Live Demo](https://next-start.netlify.app)
+
+## Features
+
+- Next JS with typescript configured out of the box
+- Easily handling client state with [Zustand](https://github.com/pmndrs/zustand)
+- Handling server state with [React Query](https://react-query.tanstack.com/)
+- Create custom ui with [Mantine](https://mantine.dev/)
+- Multiple hooks ready to use from Mantine
+- Clean code with Eslint and Prettier
+- Import popular icon from [React Icons](https://react-icons.github.io/react-icons/)
+- Handle http request with axios
+
+## Extension
+
+- Eslint for linting code
+- Prettier for code formatting
+- Code spell checker to avoid misspell or typo in code
+- TODO Highlight in comment
+
+## Try it now!
+
+### Github Template
+
+[Create repo from this template](https://github.com/hasan-almujtaba/next-starter/generate)
+
+### Clone to local
 
 ```bash
-npm run dev
-# or
-yarn dev
+pnpm dlx degit hasan-almujtaba/next-starter my-app
+cd my-app
+pnpm i
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Usage
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+### Development
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+Start local environment
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+```bash
+pnpm dev
+```
 
-## Learn More
+### Build
 
-To learn more about Next.js, take a look at the following resources:
+To build the App, run
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```bash
+pnpm build
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+### Code Linting
 
-## Deploy on Vercel
+To lint the App, run
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```bash
+pnpm lint
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+### Code Formatting
+
+To format the App, run
+
+```bash
+pnpm format
+```
