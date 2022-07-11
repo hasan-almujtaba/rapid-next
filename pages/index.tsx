@@ -1,11 +1,11 @@
-import { NextPageWithLayout } from '../types/layout'
-import DefaultLayout from '../components/layouts/default'
+import { NextPageWithLayout } from '@/types/layout'
+import DefaultLayout from '@/components/DefaulLayout/DefaultLayout'
 import { ReactElement, useEffect, useState } from 'react'
 import useStore from '../store'
 import { Affix, Box, Button, Text } from '@mantine/core'
 import { dehydrate, QueryClient } from 'react-query'
 import Head from 'next/head'
-import FeatureList from '../components/features/FeatureList'
+import FeatureList from '@/components/FeatureList/FeatureList'
 import Link from 'next/link'
 
 const Home: NextPageWithLayout = () => {
