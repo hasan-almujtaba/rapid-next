@@ -1,4 +1,3 @@
-import { GetServerSidePropsContext } from 'next'
 import { AppPropsWithLayout } from '../types/layout'
 import {
   MantineProvider,
@@ -6,15 +5,11 @@ import {
   ColorScheme,
 } from '@mantine/core'
 import { useState } from 'react'
-import { getCookie, setCookies } from 'cookies-next'
 import { Hydrate, QueryClient, QueryClientProvider } from 'react-query'
 import { ReactQueryDevtools } from 'react-query/devtools'
+import { useLocalStorage } from '@mantine/hooks'
 
-const App = ({
-  Component,
-  pageProps,
-  preferredColorScheme,
-}: AppPropsWithLayout & { preferredColorScheme: ColorScheme }) => {
+const App = ({ Component, pageProps }: AppPropsWithLayout) => {
   /**
    * React Query Configuration
    */
@@ -22,21 +17,21 @@ const App = ({
 
   /**
    * Use the layout defined at the page level, if available
+   * @see https://nextjs.org/docs/basic-features/layouts
    */
   const getLayout = Component.getLayout ?? ((page) => page)
 
   /**
-   * Detect user's preferred color scheme
+   * Set ui color scheme
+   * @see https://mantine.dev/theming/dark-theme/#save-to-localstorage-and-add-keyboard-shortcut
    */
-  const [colorScheme, setColorScheme] =
-    useState<ColorScheme>(preferredColorScheme)
-  const toggleColorScheme = (value?: ColorScheme) => {
-    const nextColorScheme = value || (colorScheme === 'dark' ? 'light' : 'dark')
-    setColorScheme(nextColorScheme)
-    setCookies('mantine-color-scheme', nextColorScheme, {
-      maxAge: 60 * 60 * 24 * 30,
-    })
-  }
+  const [colorScheme, setColorScheme] = useLocalStorage<ColorScheme>({
+    key: 'mantine-color-scheme',
+    defaultValue: 'light',
+    getInitialValueInEffect: true,
+  })
+  const toggleColorScheme = (value?: ColorScheme) =>
+    setColorScheme(value || (colorScheme === 'dark' ? 'light' : 'dark'))
 
   return (
     <QueryClientProvider client={queryClient}>
@@ -58,12 +53,5 @@ const App = ({
     </QueryClientProvider>
   )
 }
-
-/**
- * Get the user's preferred color scheme from the cookie
- */
-App.getInitialProps = ({ ctx }: { ctx: GetServerSidePropsContext }) => ({
-  preferredColorScheme: getCookie('mantine-color-scheme', ctx) || 'light',
-})
 
 export default App
