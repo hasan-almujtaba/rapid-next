@@ -1,12 +1,12 @@
 import { NextPageWithLayout } from '../types/layout'
-import DefaultLayout from '../components/layouts/default'
+import DefaultLayout from '@/components/DefaulLayout/DefaultLayout'
 import { ReactElement } from 'react'
 import { dehydrate, QueryClient } from 'react-query'
-import { fetchPosts } from '../apis/example'
-import PostList from '../components/examples/post-list'
+import { fetchPosts } from '@/apis/post'
+import PostList from '@/components/PostList/PostList'
 import Head from 'next/head'
 
-const Home: NextPageWithLayout = () => {
+const Posts: NextPageWithLayout = () => {
   return (
     <>
       <Head>
@@ -19,7 +19,7 @@ const Home: NextPageWithLayout = () => {
   )
 }
 
-Home.getLayout = (page: ReactElement) => {
+Posts.getLayout = (page: ReactElement) => {
   return <DefaultLayout>{page}</DefaultLayout>
 }
 
@@ -39,4 +39,4 @@ export const getStaticProps = async () => {
   }
 }
 
-export default Home
+export default Posts

@@ -1,15 +1,12 @@
 import { Card, Text } from '@mantine/core'
-import { Post } from '../../types/example'
+import { Post } from '@/types/example'
+import useStyles from './PostCard.styles'
 
 const PostCard = ({ title, body }: Post) => {
+  const { classes } = useStyles()
+
   return (
-    <Card
-      sx={() => ({
-        borderRadius: '8px',
-        width: '300px',
-        flexGrow: 1,
-      })}
-    >
+    <Card className={classes.card}>
       <Text
         weight={500}
         size="lg"

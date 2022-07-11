@@ -1,7 +1,9 @@
-import { Box } from '@mantine/core'
-import FeatureCard from './FeatureCard'
+import FeatureCard from '@/components/FeatureCard/FeatureCard'
+import useStyles from './FeatureList.styles'
 
 const FeatureList = () => {
+  const { classes } = useStyles()
+
   const features = [
     'Next JS configured out of the box',
     'Server state management with react query',
@@ -15,24 +17,18 @@ const FeatureList = () => {
   ]
 
   return (
-    <Box>
-      <h2 style={{ textAlign: 'center' }}>What is included in this starter?</h2>
+    <div>
+      <h2 className={classes.title}>What is included in this starter?</h2>
 
-      <Box
-        sx={() => ({
-          display: 'flex',
-          flexDirection: 'column',
-          gap: '10px',
-        })}
-      >
+      <div className={classes.contentContainer}>
         {features.map((text: string, id: number) => (
           <FeatureCard
             text={text}
             key={id}
           />
         ))}
-      </Box>
-    </Box>
+      </div>
+    </div>
   )
 }
 
