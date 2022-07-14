@@ -45,7 +45,7 @@ const Home: NextPageWithLayout = () => {
 
       <FeatureList />
 
-      <Link href="/example">
+      <Link href="/posts">
         <Text
           sx={() => ({
             cursor: 'pointer',

@@ -1,17 +1,22 @@
 import create from 'zustand'
 import { devtools, persist } from 'zustand/middleware'
 import { Store } from '../types/store'
-import createExample from './example'
+import createCount from './count'
 
 /**
  * Create Store
- * See https://github.com/pmndrs/zustand/blob/main/docs/typescript.md
+ * @see https://github.com/pmndrs/zustand/blob/main/docs/typescript.md#interdependent-slices-pattern
  */
 const useStore = create<Store>()(
   devtools(
-    persist((...a) => ({
-      ...createExample(...a),
-    }))
+    persist(
+      (...a) => ({
+        ...createCount(...a),
+      }),
+      {
+        name: 'zustand',
+      }
+    )
   )
 )
 

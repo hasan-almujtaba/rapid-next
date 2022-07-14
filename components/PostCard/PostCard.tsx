@@ -1,5 +1,5 @@
 import { Card, Text } from '@mantine/core'
-import { Post } from '@/types/example'
+import { Post } from '@/types/post'
 import useStyles from './PostCard.styles'
 
 const PostCard = ({ title, body }: Post) => {
