@@ -1,6 +1,6 @@
 import { usePosts } from '@/hooks/post'
 import PostCard from '@/components/PostCard/PostCard'
-import { Post } from '@/types/example'
+import { Post } from '@/types/post'
 import useStyles from './PostList.styles'
 
 const PostList = () => {
