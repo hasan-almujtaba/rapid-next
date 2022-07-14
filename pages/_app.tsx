@@ -8,6 +8,8 @@ import { useState } from 'react'
 import { Hydrate, QueryClient, QueryClientProvider } from 'react-query'
 import { ReactQueryDevtools } from 'react-query/devtools'
 import { useLocalStorage } from '@mantine/hooks'
+import { ModalsProvider } from '@mantine/modals'
+import { NotificationsProvider } from '@mantine/notifications'
 
 const App = ({ Component, pageProps }: AppPropsWithLayout) => {
   /**
@@ -45,7 +47,14 @@ const App = ({ Component, pageProps }: AppPropsWithLayout) => {
             theme={{ colorScheme }}
             withNormalizeCSS
           >
-            {getLayout(<Component {...pageProps} />)}
+            <ModalsProvider>
+              <NotificationsProvider
+                position="top-right"
+                zIndex={2077}
+              >
+                {getLayout(<Component {...pageProps} />)}
+              </NotificationsProvider>
+            </ModalsProvider>
           </MantineProvider>
         </ColorSchemeProvider>
       </Hydrate>
