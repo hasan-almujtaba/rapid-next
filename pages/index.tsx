@@ -5,8 +5,6 @@ import useStore from '../store'
 import { Affix, Box, Button, Text } from '@mantine/core'
 import { dehydrate, QueryClient } from 'react-query'
 import Head from 'next/head'
-import FeatureList from '@/components/FeatureList/FeatureList'
-import Link from 'next/link'
 
 const Home: NextPageWithLayout = () => {
   /**
