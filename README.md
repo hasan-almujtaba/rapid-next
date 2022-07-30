@@ -6,6 +6,10 @@ React with Next JS configured out of the box for building any type of website wi
 
 [Live Demo](https://next-start.netlify.app)
 
+## Example
+
+- [Financial tracker app](https://github.com/hasan-almujtaba/financial-tracker)
+
 ## What is included
 
 - Next JS with typescript configured out of the box
