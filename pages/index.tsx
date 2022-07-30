@@ -1,5 +1,5 @@
 import { NextPageWithLayout } from '@/types/layout'
-import DefaultLayout from '@/components/DefaulLayout/DefaultLayout'
+import DefaultLayout from '@/layouts/DefaultLayout/DefaultLayout'
 import { ReactElement, useEffect, useState } from 'react'
 import useStore from '../store'
 import { Affix, Box, Button, Text } from '@mantine/core'

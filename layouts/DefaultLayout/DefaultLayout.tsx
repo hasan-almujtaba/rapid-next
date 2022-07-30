@@ -5,8 +5,8 @@ import {
   useMantineTheme,
   useMantineColorScheme,
 } from '@mantine/core'
-import { DefaultLayout } from '../../types/layout'
-import ColorSwitch from '../ColorSwitch/ColorSwitch'
+import { DefaultLayout } from '@/types/layout'
+import ColorSwitch from '@/components/ColorSwitch/ColorSwitch'
 
 const DefaultLayout = ({ children }: DefaultLayout) => {
   /**
