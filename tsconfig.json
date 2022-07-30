@@ -17,6 +17,7 @@
     "incremental": true,
     "paths": {
       "@/apis/*": ["apis/*"],
+      "@/layouts/*": ["layouts/*"],
       "@/components/*": ["components/*"],
       "@/types/*": ["types/*"],
       "@/hooks/*": ["hooks/*"]

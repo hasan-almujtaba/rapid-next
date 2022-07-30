@@ -1,5 +1,5 @@
 import { NextPageWithLayout } from '../types/layout'
-import DefaultLayout from '@/components/DefaulLayout/DefaultLayout'
+import DefaultLayout from '@/layouts/DefaultLayout/DefaultLayout'
 import { ReactElement } from 'react'
 import { dehydrate, QueryClient } from 'react-query'
 import { fetchPosts } from '@/apis/post'
