@@ -35,30 +35,31 @@ const Home: NextPageWithLayout = () => {
       <Box
         sx={() => ({
           textAlign: 'center',
+          marginTop: '100px',
         })}
       >
-        <h1>Next Starter</h1>
-        <Text sx={() => ({ fontStyle: 'italic' })}>
-          Opinionated react starter built on top of Next JS
-        </Text>
-      </Box>
-
-      <FeatureList />
-
-      <Link href="/posts">
         <Text
           sx={() => ({
-            cursor: 'pointer',
-            textAlign: 'center',
-            marginTop: '10px',
-            '&:hover': {
-              textDecorationLine: 'underline',
-            },
+            fontSize: '50px',
+            fontWeight: 'bolder',
           })}
         >
-          See example in action
+          Next Starter
         </Text>
-      </Link>
+        <Text sx={() => ({ fontStyle: 'italic', letterSpacing: '0.1em' })}>
+          Opinionated react starter built on top of Next JS
+        </Text>
+        <Button
+          sx={() => ({
+            marginTop: '10px',
+          })}
+          component="a"
+          href="https://github.com/hasan-almujtaba/next-starter"
+          target="_blank"
+        >
+          Get Started
+        </Button>
+      </Box>
 
       <Affix position={{ bottom: 25, right: 20 }}>
         <Button

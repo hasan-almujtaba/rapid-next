@@ -6,9 +6,14 @@ React with Next JS configured out of the box for building any type of website wi
 
 [Live Demo](https://next-start.netlify.app)
 
-## Features
+## Example
+
+- [Financial tracker app](https://github.com/hasan-almujtaba/financial-tracker)
+
+## What is included
 
 - Next JS with typescript configured out of the box
+- Next auth for authentication using middleware
 - Easily handling client state with [Zustand](https://github.com/pmndrs/zustand)
 - Handling server state with [React Query](https://react-query.tanstack.com/)
 - Create custom ui with [Mantine](https://mantine.dev/)
@@ -16,6 +21,7 @@ React with Next JS configured out of the box for building any type of website wi
 - Clean code with Eslint and Prettier
 - Import popular icon from [React Icons](https://react-icons.github.io/react-icons/)
 - Handle http request with axios
+- PNPM for disk space efficient package manager
 
 ## Extension
 
