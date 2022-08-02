@@ -5,9 +5,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint --dir .",
-    "format": "prettier --write **/*.{js,jsx,ts,tsx}",
-    "prepare": "husky install"
+    "lint": "next lint",
+    "format": "prettier --write **/*.{js,jsx,ts,tsx}"
   },
   "dependencies": {
     "@mantine/core": "^4.2.9",
