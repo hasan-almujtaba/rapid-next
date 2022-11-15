@@ -6,7 +6,9 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "format": "prettier --write **/*.{js,jsx,ts,tsx}"
+    "format": "prettier --write **/*.{js,jsx,ts,tsx}",
+    "prepare": "husky install",
+    "postinstall": "npm run prepare"
   },
   "dependencies": {
     "@headlessui/react": "^1.7.4",
