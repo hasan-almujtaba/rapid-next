@@ -20,6 +20,7 @@
         "args": "after-used",
         "argsIgnorePattern": "^_"
       }
-    ]
+    ],
+    "unicorn/prevent-abbreviations": "off"
   }
 }
