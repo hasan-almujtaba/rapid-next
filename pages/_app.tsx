@@ -2,6 +2,7 @@ import { AppPropsWithLayout } from '../types/layout'
 import { useState } from 'react'
 import { Hydrate, QueryClient, QueryClientProvider } from 'react-query'
 import { ReactQueryDevtools } from 'react-query/devtools'
+import 'styles/global.css'
 
 const App = ({ Component, pageProps }: AppPropsWithLayout) => {
   /**
