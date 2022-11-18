@@ -1,7 +1,8 @@
 import create from 'zustand'
 import { devtools, persist } from 'zustand/middleware'
 import { Store } from '../types/store'
-import createCount from './count'
+import createBearSlice from './bear'
+import createFishSlice from './fish'
 
 /**
  * Create Store
@@ -11,7 +12,8 @@ const useStore = create<Store>()(
   devtools(
     persist(
       (...a) => ({
-        ...createCount(...a),
+        ...createBearSlice(...a),
+        ...createFishSlice(...a),
       }),
       {
         name: 'zustand',
