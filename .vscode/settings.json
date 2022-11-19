@@ -6,5 +6,11 @@
       "backgroundColor": "#e74c3c",
       "color": "#fff"
     }
-  ]
+  ],
+  "typescript.tsdk": "node_modules\\.pnpm\\typescript@4.7.3\\node_modules\\typescript\\lib",
+  "typescript.enablePromptUseWorkspaceTsdk": true,
+  "css.lint.unknownAtRules": "ignore",
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  }
 }

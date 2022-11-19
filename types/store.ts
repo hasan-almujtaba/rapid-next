@@ -3,16 +3,21 @@ import { StateCreator } from 'zustand'
 /**
  * Independent slices
  */
-export interface CountSlice {
-  count: number
-  increment: () => void
+export type BearSlice = {
+  bears: number
+  addBear: () => void
+}
+
+export type FishSlice = {
+  fishes: number
+  addFish: () => void
 }
 
 /**
  * Main Store
- * @see https://github.com/pmndrs/zustand/blob/main/docs/typescript.md#independent-slices-pattern
+ * @see https://github.com/pmndrs/zustand/blob/main/docs/guides/typescript.md#slices-pattern
  */
-export type Store = CountSlice
+export type Store = BearSlice & FishSlice
 
 /**
  * Set & Get for independent slices

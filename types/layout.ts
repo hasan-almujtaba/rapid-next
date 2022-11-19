@@ -20,6 +20,6 @@ export type AppPropsWithLayout = AppProps & {
 /**
  * Layout component
  */
-export interface DefaultLayout {
+export interface Layout {
   children: ReactNode
 }
