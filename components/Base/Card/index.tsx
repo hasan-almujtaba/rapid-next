@@ -2,7 +2,7 @@ import React, { PropsWithChildren } from 'react'
 
 import { CardProps } from './type'
 
-const Card = (props: CardProps) => {
+export const Card = (props: CardProps) => {
   const { children, href } = props
 
   /**
@@ -42,5 +42,3 @@ const Text = (props: PropsWithChildren) => {
 Card.Title = Title
 
 Card.Text = Text
-
-export default Card

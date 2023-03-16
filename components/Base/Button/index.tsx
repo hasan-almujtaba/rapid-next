@@ -1,11 +1,11 @@
 import clsx from 'clsx'
 import { ElementType, forwardRef } from 'react'
 
-import { PolymorphicRef } from '@/types/component'
+import { PolymorphicRef } from 'types/component'
 
 import { ButtonComponent, ButtonProps } from './type'
 
-const Button: ButtonComponent = forwardRef(function Button<
+export const Button: ButtonComponent = forwardRef(function Button<
   C extends ElementType
 >(properties: ButtonProps<C>, reference: PolymorphicRef<C>) {
   const {
@@ -46,5 +46,3 @@ const Button: ButtonComponent = forwardRef(function Button<
     </Component>
   )
 })
-
-export default Button

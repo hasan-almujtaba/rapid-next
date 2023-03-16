@@ -1,6 +1,6 @@
 import { render, screen } from '@testing-library/react'
 
-import Card from '.'
+import { Card } from '.'
 
 describe('card', () => {
   it('render as link correctly', () => {

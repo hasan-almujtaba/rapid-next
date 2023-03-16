@@ -1,7 +1,5 @@
-import { Layout } from '@/types/layout'
+import { Layout } from 'types/layout'
 
-const Default = ({ children }: Layout) => {
+export const Default = ({ children }: Layout) => {
   return <div>{children}</div>
 }
-
-export default Default

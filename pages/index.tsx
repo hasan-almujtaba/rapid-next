@@ -2,7 +2,7 @@ import Head from 'next/head'
 import React, { ReactElement } from 'react'
 
 import { Card } from 'components/base'
-import Default from 'layouts/default'
+import { Default } from 'layouts'
 import { NextPageWithLayout } from 'types/layout'
 
 const items = [

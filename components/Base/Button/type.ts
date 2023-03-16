@@ -1,6 +1,6 @@
 import { ElementType, ReactElement } from 'react'
 
-import { PolymorphicComponentPropWithRef } from '@/types/component'
+import { PolymorphicComponentPropWithRef } from 'types/component'
 
 /**
  * Custom props
