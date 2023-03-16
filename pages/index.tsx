@@ -1,8 +1,9 @@
+import Head from 'next/head'
+import React, { ReactElement } from 'react'
+
 import Card from '@/components/Base/Card'
 import Default from '@/layouts/Default'
 import { NextPageWithLayout } from '@/types/layout'
-import Head from 'next/head'
-import React, { ReactElement } from 'react'
 
 const items = [
   {

@@ -1,16 +1,17 @@
-import { render } from '@testing-library/react'
+import { render, screen } from '@testing-library/react'
+
 import Card from '.'
 
 describe('card', () => {
   it('render as link correctly', () => {
-    const { container } = render(<Card href="http://example.com">example</Card>)
+    render(<Card href="http://example.com">example</Card>)
 
-    expect(container.firstChild?.nodeName).toEqual('A')
+    expect(screen.getByRole('link')).toBeInTheDocument()
   })
 
   it('render as div correctly', () => {
-    const { container } = render(<Card>example</Card>)
+    render(<Card>example</Card>)
 
-    expect(container.firstChild?.nodeName).toEqual('DIV')
+    expect(screen.getByText('example').hasAttribute('href')).toBe(false)
   })
 })

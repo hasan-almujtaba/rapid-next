@@ -1,4 +1,5 @@
 import React, { PropsWithChildren } from 'react'
+
 import { CardProps } from './type'
 
 const Card = (props: CardProps) => {

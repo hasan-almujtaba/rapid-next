@@ -1,11 +1,12 @@
-import { AppPropsWithLayout } from '../types/layout'
-import { useState } from 'react'
 import {
   Hydrate,
   QueryClient,
   QueryClientProvider,
 } from '@tanstack/react-query'
 import { ReactQueryDevtools } from '@tanstack/react-query-devtools'
+import { useState } from 'react'
+
+import { AppPropsWithLayout } from '../types/layout'
 import 'styles/global.css'
 
 const App = ({ Component, pageProps }: AppPropsWithLayout) => {

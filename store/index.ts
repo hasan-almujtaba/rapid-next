@@ -1,6 +1,8 @@
 import create from 'zustand'
 import { devtools, persist } from 'zustand/middleware'
+
 import { Store } from '../types/store'
+
 import createBearSlice from './bear'
 import createFishSlice from './fish'
 

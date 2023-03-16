@@ -1,6 +1,5 @@
 {
-  "parser": "@typescript-eslint/parser",
-  "plugins": ["@typescript-eslint", "unused-imports"],
+  "plugins": ["unused-imports"],
   "extends": [
     "eslint:recommended",
     "plugin:@typescript-eslint/recommended",
@@ -10,7 +9,36 @@
   ],
   "rules": {
     "no-console": "warn",
+    "no-restricted-imports": [
+      "error",
+      {
+        "patterns": ["~/features/*/*"]
+      }
+    ],
+    "linebreak-style": ["error", "unix"],
+
+    "import/order": [
+      "error",
+      {
+        "groups": [
+          "builtin",
+          "external",
+          "internal",
+          "parent",
+          "sibling",
+          "index",
+          "object"
+        ],
+        "newlines-between": "always",
+        "alphabetize": { "order": "asc", "caseInsensitive": true }
+      }
+    ],
+    "import/default": "off",
+    "import/no-named-as-default-member": "off",
+    "import/no-named-as-default": "off",
+
     "@typescript-eslint/no-unused-vars": "off",
+
     "unused-imports/no-unused-imports": "error",
     "unused-imports/no-unused-vars": [
       "warn",
@@ -21,6 +49,23 @@
         "argsIgnorePattern": "^_"
       }
     ],
-    "unicorn/prevent-abbreviations": "off"
-  }
+
+    "unicorn/prevent-abbreviations": "off",
+    "unicorn/filename-case": [
+      "error",
+      {
+        "case": "kebabCase",
+        "ignore": ["App"]
+      }
+    ]
+  },
+  "overrides": [
+    {
+      "files": [
+        "**/__tests__/**/*.[jt]s?(x)",
+        "**/?(*.)+(spec|test).[jt]s?(x)"
+      ],
+      "extends": ["plugin:testing-library/react"]
+    }
+  ]
 }
