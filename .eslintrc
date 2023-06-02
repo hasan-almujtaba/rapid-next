@@ -16,6 +16,14 @@
       }
     ],
     "linebreak-style": ["error", "unix"],
+    "no-nested-ternary": "error",
+    "no-restricted-syntax": [
+      "error",
+      {
+        "selector": "SwitchStatement",
+        "message": "Avoid using switch statements. Use object lookup instead."
+      }
+    ],
 
     "import/order": [
       "error",
@@ -54,10 +62,10 @@
     "unicorn/filename-case": [
       "error",
       {
-        "case": "kebabCase",
-        "ignore": ["App"]
+        "case": "kebabCase"
       }
-    ]
+    ],
+    "unicorn/no-null": "off"
   },
   "overrides": [
     {

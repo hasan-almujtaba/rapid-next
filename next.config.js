@@ -4,12 +4,12 @@ const nextConfig = {
   eslint: {
     dirs: [
       'apis',
+      'app',
       'components',
-      'hooks',
-      'layouts',
-      'pages',
+      'contexts',
       'features',
-      'store',
+      'hooks',
+      'pages',
       'types',
     ],
   },
