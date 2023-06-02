@@ -12,7 +12,13 @@
     "no-restricted-imports": [
       "error",
       {
-        "patterns": ["features/*/*"]
+        "patterns": [
+          "components/*/*",
+          "features/*/*",
+          "hooks/*",
+          "types/*",
+          "utils/*"
+        ]
       }
     ],
     "linebreak-style": ["error", "unix"],
