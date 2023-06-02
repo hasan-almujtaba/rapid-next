@@ -10,11 +10,6 @@ export const items = [
     href: 'https://tanstack.com/query/v4',
   },
   {
-    title: 'State Library →',
-    text: 'Learn more about Zustand features and API.',
-    href: 'https://github.com/pmndrs/zustand/wiki',
-  },
-  {
     title: 'CSS Framework →',
     text: 'Learn more about Tailwind CSS features and API.',
     href: 'https://tailwindcss.com',
@@ -23,10 +18,5 @@ export const items = [
     title: 'Headless Component →',
     text: 'Learn more about Headless UI features and API.',
     href: 'https://headlessui.com',
-  },
-  {
-    title: 'Authentication →',
-    text: 'Learn more about Next Auth features and API.',
-    href: 'https://next-auth.js.org',
   },
 ]
