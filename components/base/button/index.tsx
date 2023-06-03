@@ -1,7 +1,7 @@
-import clsx from 'clsx'
 import { ElementType, forwardRef } from 'react'
+import { twMerge } from 'tailwind-merge'
 
-import { PolymorphicRef } from 'types/component'
+import { PolymorphicRef } from 'types'
 
 import { ButtonComponent, ButtonProps } from './type'
 
@@ -36,10 +36,10 @@ export const Button: ButtonComponent = forwardRef(function Button<
     <Component
       ref={reference}
       {...rest}
-      className={clsx(
-        className ?? undefined,
+      className={twMerge(
         'group',
-        `btn btn-${variant} btn-${colorScheme}`
+        `btn btn-${variant} btn-${colorScheme}`,
+        className
       )}
     >
       {variant === 'outlined' ? textWrapper : children}
