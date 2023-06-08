@@ -1,82 +1,71 @@
-# Next Starter
+✨ Rapid Next ✨
+=======================
 
-React with Next JS configured out of the box for building any type of website with clean code and better Developer Experience
+This is a simple starter boilerplate that provides a solid foundation for your next project. It incorporates the following features and libraries to help you build modern and efficient web applications.
 
-## Live Demo
+Features
+--------
 
-[Live Demo](https://next-start.netlify.app)
+-   Library Used 📚:
 
-## Example
+    -   Next.js: A popular React framework for building server-rendered and static websites.
+    -   React Query: A powerful data fetching and caching library for React applications.
+    -   Tailwind CSS: A highly customizable CSS framework that provides utility classes to build stylish UI components.
+    -   Headless UI: A set of completely unstyled, fully accessible UI components for building great user interfaces.
+    -   Axios: A promise-based HTTP client for making API requests from the browser or Node.js.
+    -   React Icons: A library of popular icon packs for React applications.
+    -   tailwind-merge: A utility library for merging Tailwind CSS classes dynamically.
+    -   Day.js: A minimalist JavaScript library for parsing, manipulating, and formatting dates.
+    -   Jest: A delightful JavaScript testing framework.
+    -   Husky: A Git hooks tool that helps run scripts and enforce policies on Git actions.
+    -   PNPM: A fast and disk space-efficient package manager for JavaScript projects.
+-   Code Quality Tools 🧰:
 
-- [Financial tracker app](https://github.com/hasan-almujtaba/financial-tracker)
-- [Meal Book](https://github.com/hasan-almujtaba/meal-book)
+    -   ESLint: A widely-used linter tool that helps enforce coding standards and identify problematic patterns.
+    -   Prettier: An opinionated code formatter that ensures consistent code style throughout your project.
+    -   lint-staged: A tool that allows you to run linters on staged files, promoting code quality in your commits.
 
-## What is included
+Live Demo 🌐
+------------
 
-- Next JS with typescript configured out of the box
-- [Next auth](https://next-auth.js.org) for authentication using middleware
-- Easily handling client state with [Zustand](https://github.com/pmndrs/zustand)
-- Handling server state with [React Query](https://react-query.tanstack.com)
-- utility-first CSS framework via [Tailwind CSS](https://tailwindcss.com)
-- Find and fix code problems with [ESLint](https://eslint.org)
-- Format code with consistent style using [Prettier](https://eslint.org)
-- Headless Component using [Headless UI](https://headlessui.com)
-- Import popular icon from [React Icons](https://react-icons.github.io/react-icons)
-- Handle http request with [Axios](https://axios-http.com)
-- [PNPM](https://pnpm.io) for disk space efficient package manager
+Experience the boilerplate in action with our live demo. Click [here](https://example.com/) to explore it!
 
-## Extension
+Example 🚀
+----------
 
-- Eslint for linting code
-- Prettier for code formatting
-- Code spell checker to avoid misspell or typo in code
-- TODO Highlight in comment
-- Conventional Commits for better commit message
+We have included a comprehensive example to demonstrate the usage and capabilities of this boilerplate. Check out the example folder for more details.
 
-## Try it now!
+- Financial Tracker
+- Meal Book
 
-### Github Template
+Try it Now ▶️
+-------------
 
-[Create repo from this template](https://github.com/hasan-almujtaba/next-starter/generate)
+To get started with this boilerplate immediately, follow these steps:
 
-### Clone to local
+1.  Clone the repository:
 
-```bash
-pnpm dlx degit hasan-almujtaba/next-starter my-app
-cd my-app
-pnpm i
-```
+    bashCopy code
 
-## Usage
+    `git clone https://github.com/your/repo.git`
 
-### Development
+2.  Install dependencies using PNPM:
 
-Start local environment
+    bashCopy code
 
-```bash
-pnpm dev
-```
+    `pnpm install`
 
-### Build
+3.  Start the development server:
 
-To build the App, run
+    bashCopy code
 
-```bash
-pnpm build
-```
+    `pnpm dev`
 
-### Code Linting
+4.  Open your browser and navigate to [http://localhost:3000](http://localhost:3000/) to see your application running!
 
-To lint the App, run
+Feel free to customize the boilerplate to meet your specific requirements. Happy coding! 😄
 
-```bash
-pnpm lint
-```
+License 📝
+----------
 
-### Code Formatting
-
-To format the App, run
-
-```bash
-pnpm format
-```
+This project is licensed under the [MIT License](https://chat.openai.com/LICENSE).
