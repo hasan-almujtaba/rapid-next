@@ -1,9 +1,10 @@
 {
-  "plugins": ["unused-imports"],
+  "plugins": ["unused-imports", "@tanstack/query"],
   "extends": [
     "eslint:recommended",
     "plugin:@typescript-eslint/recommended",
     "plugin:unicorn/recommended",
+    "plugin:@tanstack/eslint-plugin-query/recommended",
     "next/core-web-vitals",
     "prettier"
   ],
@@ -71,7 +72,10 @@
         "case": "kebabCase"
       }
     ],
-    "unicorn/no-null": "off"
+    "unicorn/no-null": "off",
+
+    "@tanstack/query/exhaustive-deps": "error",
+    "@tanstack/query/prefer-query-object-syntax": "error"
   },
   "overrides": [
     {

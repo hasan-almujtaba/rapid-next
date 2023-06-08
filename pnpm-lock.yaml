@@ -4,6 +4,7 @@ specifiers:
   '@headlessui/react': ^1.7.13
   '@tailwindcss/forms': ^0.5.3
   '@tailwindcss/typography': ^0.5.9
+  '@tanstack/eslint-plugin-query': ^4.29.9
   '@tanstack/react-query': ^4.26.1
   '@tanstack/react-query-devtools': ^4.26.1
   '@testing-library/jest-dom': ^5.16.5
@@ -54,6 +55,7 @@ dependencies:
 devDependencies:
   '@tailwindcss/forms': 0.5.3_tailwindcss@3.3.2
   '@tailwindcss/typography': 0.5.9_tailwindcss@3.3.2
+  '@tanstack/eslint-plugin-query': 4.29.9
   '@testing-library/jest-dom': 5.16.5
   '@testing-library/react': 13.4.0_biqbaboplfbrettd7655fr4n2y
   '@types/jest': 29.4.4
@@ -939,6 +941,10 @@ packages:
       lodash.merge: 4.6.2
       postcss-selector-parser: 6.0.10
       tailwindcss: 3.3.2
+    dev: true
+
+  /@tanstack/eslint-plugin-query/4.29.9:
+    resolution: {integrity: sha512-JlIZcs+zhl/ihta49iIbMCf3E8tSvGDqMIH+oItnYLOzWI7oiujXu7FYgna2E1V79KhR0PaxkPX6jHZLpvacgw==}
     dev: true
 
   /@tanstack/match-sorter-utils/8.7.6:
