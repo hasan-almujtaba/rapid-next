@@ -45,21 +45,21 @@ To get started with this boilerplate immediately, follow these steps:
 
 1.  Clone the repository:
 
-    bashCopy code
-
-    `git clone https://github.com/your/repo.git`
+    ```
+    git clone https://github.com/hasan-almujtaba/rapid-next.git
+    ```
 
 2.  Install dependencies using PNPM:
 
-    bashCopy code
-
-    `pnpm install`
+    ```
+    pnpm install
+    ```
 
 3.  Start the development server:
 
-    bashCopy code
-
-    `pnpm dev`
+    ```
+    pnpm dev
+    ```
 
 4.  Open your browser and navigate to [http://localhost:3000](http://localhost:3000/) to see your application running!
 
