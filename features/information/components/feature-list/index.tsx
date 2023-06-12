@@ -37,7 +37,7 @@ export const FeatureList = () => {
 
       <p className="mt-5 text-center">
         Get started by editing{' '}
-        <code className="rounded bg-gray-300 px-1">app/page.tsx</code>
+        <code className="rounded bg-gray-300 px-1">page/index.tsx</code>
       </p>
     </div>
   )
