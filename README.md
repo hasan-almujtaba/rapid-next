@@ -1,7 +1,7 @@
 ✨ Rapid Next ✨
 =======================
 
-This is a simple starter boilerplate that provides a solid foundation for your next project. It incorporates the following features and libraries to help you build modern and efficient web applications.
+This is a simple starter boilerplate that provides a solid foundation for your next project. It incorporates the following features and libraries to help you build modern and efficient web applications. lol
 
 Features
 --------
