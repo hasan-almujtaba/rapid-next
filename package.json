@@ -9,7 +9,8 @@
     "format": "prettier --write **/*.{js,jsx,ts,tsx}",
     "prepare": "husky install",
     "postinstall": "npm run prepare",
-    "test": "jest --watch"
+    "test": "jest --watch",
+    "cleanup": "esno cleanup.ts"
   },
   "dependencies": {
     "@headlessui/react": "^1.7.17",
@@ -43,6 +44,7 @@
     "eslint-plugin-testing-library": "^6.0.1",
     "eslint-plugin-unicorn": "^48.0.1",
     "eslint-plugin-unused-imports": "^3.0.0",
+    "esno": "^0.17.0",
     "husky": "^8.0.3",
     "jest": "^29.7.0",
     "jest-environment-jsdom": "^29.7.0",
