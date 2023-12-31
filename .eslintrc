@@ -1,5 +1,5 @@
 {
-  "plugins": ["unused-imports", "@tanstack/query"],
+  "plugins": ["unused-imports"],
   "extends": [
     "eslint:recommended",
     "plugin:@typescript-eslint/recommended",
@@ -72,10 +72,7 @@
         "case": "kebabCase"
       }
     ],
-    "unicorn/no-null": "off",
-
-    "@tanstack/query/exhaustive-deps": "error",
-    "@tanstack/query/prefer-query-object-syntax": "error"
+    "unicorn/no-null": "off"
   },
   "overrides": [
     {

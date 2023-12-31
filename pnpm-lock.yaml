@@ -44,8 +44,8 @@ devDependencies:
     specifier: ^0.5.10
     version: 0.5.10(tailwindcss@3.3.3)
   '@tanstack/eslint-plugin-query':
-    specifier: ^4.34.1
-    version: 4.34.1(eslint@8.27.0)
+    specifier: ^5.14.6
+    version: 5.14.6(eslint@8.27.0)(typescript@4.7.3)
   '@testing-library/jest-dom':
     specifier: ^5.17.0
     version: 5.17.0
@@ -1168,12 +1168,16 @@ packages:
       tailwindcss: 3.3.3
     dev: true
 
-  /@tanstack/eslint-plugin-query@4.34.1(eslint@8.27.0):
-    resolution: {integrity: sha512-RflOwyXamuHhuMX5RL6wtKiVw9Hi5Hhiv9gW2/ICVc4omflB+GflrxwvQ+EWRKrSRv3C0YcR0UzRxuiZ4mLq7Q==}
+  /@tanstack/eslint-plugin-query@5.14.6(eslint@8.27.0)(typescript@4.7.3):
+    resolution: {integrity: sha512-vpowwoGoB9JgZy8fljf53ZTW2yYLRQ3Tjx4WQFKxiKugQOctxaTjQk7wlYzuqA/gjzfPL9qHfKW5DTT9CmIpkA==}
     peerDependencies:
-      eslint: ^6.0.0 || ^7.0.0 || ^8.0.0
+      eslint: ^8.0.0
     dependencies:
+      '@typescript-eslint/utils': 5.62.0(eslint@8.27.0)(typescript@4.7.3)
       eslint: 8.27.0
+    transitivePeerDependencies:
+      - supports-color
+      - typescript
     dev: true
 
   /@tanstack/query-core@5.17.0:
