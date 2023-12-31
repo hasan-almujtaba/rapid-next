@@ -24,7 +24,10 @@ User.getLayout = (page) => {
 export async function getServerSideProps() {
   const queryClient = new QueryClient()
 
-  await queryClient.prefetchQuery(['users'], getUsers)
+  await queryClient.prefetchQuery({
+    queryKey: ['users'],
+    queryFn: getUsers,
+  })
 
   return {
     props: {

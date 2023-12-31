@@ -1,6 +1,7 @@
 import { useQuery } from '@tanstack/react-query'
 
 import { axiosInstance } from 'apis'
+import { TUser } from 'features/user'
 
 export const getUsers = async () => {
   try {
@@ -13,7 +14,7 @@ export const getUsers = async () => {
 }
 
 export const useGetUsers = () =>
-  useQuery({
+  useQuery<TUser[]>({
     queryKey: ['users'],
     queryFn: () => getUsers(),
   })

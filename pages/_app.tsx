@@ -1,5 +1,5 @@
 import {
-  Hydrate,
+  HydrationBoundary,
   QueryClient,
   QueryClientProvider,
 } from '@tanstack/react-query'
@@ -24,9 +24,9 @@ const App = ({ Component, pageProps }: AppPropsWithLayout) => {
 
   return (
     <QueryClientProvider client={queryClient}>
-      <Hydrate state={pageProps.dehydratedState}>
+      <HydrationBoundary state={pageProps.dehydratedState}>
         {getLayout(<Component {...pageProps} />)}
-      </Hydrate>
+      </HydrationBoundary>
       <ReactQueryDevtools />
     </QueryClientProvider>
   )
