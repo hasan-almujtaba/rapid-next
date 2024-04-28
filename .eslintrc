@@ -14,7 +14,7 @@
       "error",
       {
         "patterns": [
-          "components/*/*",
+          "components/*/*/*",
           "features/*/*",
           "hooks/*",
           "types/*",

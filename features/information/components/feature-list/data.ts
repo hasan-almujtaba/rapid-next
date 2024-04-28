@@ -7,7 +7,7 @@ export const items = [
   {
     title: 'Fetching Library →',
     text: 'Learn more about React Query features and API.',
-    href: 'https://tanstack.com/query/v4',
+    href: 'https://tanstack.com/query',
   },
   {
     title: 'CSS Framework →',
@@ -16,7 +16,7 @@ export const items = [
   },
   {
     title: 'Headless Component →',
-    text: 'Learn more about Headless UI features and API.',
-    href: 'https://headlessui.com',
+    text: 'Learn more about Shadcn UI features and API.',
+    href: 'https://ui.shadcn.com',
   },
 ]

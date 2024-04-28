@@ -2,7 +2,7 @@
   "version": "2.0.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "next dev --turbo",
     "build": "next build",
     "start": "next start",
     "lint": "next lint --fix",
@@ -13,16 +13,19 @@
     "cleanup": "esno cleanup.ts"
   },
   "dependencies": {
-    "@headlessui/react": "^1.7.17",
-    "@heroicons/react": "^2.0.18",
-    "@tanstack/react-query": "^5.17.0",
-    "@tanstack/react-query-devtools": "^5.17.0",
+    "@radix-ui/react-slot": "^1.0.2",
+    "@tanstack/react-query": "^5.32.0",
+    "@tanstack/react-query-devtools": "^5.32.0",
     "axios": "^1.5.0",
+    "class-variance-authority": "^0.7.0",
+    "clsx": "^2.1.1",
     "dayjs": "^1.11.10",
-    "next": "13.4.4",
-    "react": "18.2.0",
-    "react-dom": "18.2.0",
-    "tailwind-merge": "^1.14.0"
+    "lucide-react": "^0.376.0",
+    "next": "14.2.3",
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
+    "tailwind-merge": "^1.14.0",
+    "tailwindcss-animate": "^1.0.7"
   },
   "devDependencies": {
     "@tailwindcss/forms": "^0.5.6",
@@ -32,14 +35,14 @@
     "@testing-library/react": "^13.4.0",
     "@types/jest": "^29.5.5",
     "@types/node": "17.0.42",
-    "@types/react": "18.0.12",
-    "@types/react-dom": "18.0.5",
+    "@types/react": "18.2.46",
+    "@types/react-dom": "18.2.18",
     "@types/testing-library__jest-dom": "^5.14.9",
     "@typescript-eslint/eslint-plugin": "^5.62.0",
     "@typescript-eslint/parser": "^5.62.0",
     "autoprefixer": "^10.4.16",
     "eslint": "8.27.0",
-    "eslint-config-next": "13.4.4",
+    "eslint-config-next": "14.0.4",
     "eslint-config-prettier": "^8.10.0",
     "eslint-plugin-testing-library": "^5.11.1",
     "eslint-plugin-unicorn": "^44.0.2",
@@ -55,5 +58,5 @@
     "tailwindcss": "^3.3.3",
     "typescript": "4.7.3"
   },
-  "packageManager": "pnpm@7.15.0"
+  "packageManager": "pnpm@9.0.6"
 }

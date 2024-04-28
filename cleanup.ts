@@ -13,7 +13,6 @@ const itemsToRemove: string[] = [
   'components/base/button',
   'features/information',
   'features/user',
-  'styles/button.css',
 ]
 
 for (const itemPath of itemsToRemove) {
