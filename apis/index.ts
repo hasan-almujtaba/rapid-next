@@ -4,10 +4,9 @@ const baseURL = process.env.NEXT_PUBLIC_API_URL
 
 export const axiosInstance = axios.create({
   baseURL,
-  headers: {
-    'X-Requested-With': 'XMLHttpRequest',
-  },
-} as any)
+})
 
+axiosInstance.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest'
 axiosInstance.defaults.withCredentials = true
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 ;(axiosInstance.defaults as any).withXSRFToken = true
