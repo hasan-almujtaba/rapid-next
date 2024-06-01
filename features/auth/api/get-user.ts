@@ -11,7 +11,7 @@ export const getUserRequest = async () => {
     if (axios.isAxiosError(error)) {
       // Access to config, request, and response
 
-      throw new Error('Unxpected')
+      return null
     }
   }
 }
