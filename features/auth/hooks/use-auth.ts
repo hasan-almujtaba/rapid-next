@@ -1,9 +1,12 @@
 import { useMutation, useQuery } from '@tanstack/react-query'
 
 import { axiosInstance } from 'apis'
-
-import { getUserRequest } from '../api/get-user'
-import { loginRequest } from '../api/login'
+import {
+  TLoginRequest,
+  getUserRequest,
+  loginRequest,
+  logoutRequest,
+} from 'features/auth'
 
 const csrf = () => axiosInstance.get('/sanctum/csrf-cookie')
 
@@ -19,15 +22,26 @@ export const useAuth = () => {
   })
 
   const { mutate: loginMutate } = useMutation({
-    mutationFn: (data) => loginRequest(data),
+    mutationFn: (data: TLoginRequest) => loginRequest(data),
     onSuccess: () => refetch(),
   })
 
-  const login = async (data: any) => {
+  const login = async (data: TLoginRequest) => {
     await csrf()
 
     loginMutate(data)
   }
 
-  return { csrf, login, user, isLoading }
+  const { mutate: logoutMutate } = useMutation({
+    mutationFn: () => logoutRequest(),
+    onSuccess: () => refetch(),
+  })
+
+  const logout = async () => {
+    await csrf()
+
+    logoutMutate()
+  }
+
+  return { csrf, login, user, isLoading, logout }
 }

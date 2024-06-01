@@ -2,11 +2,10 @@ import axios from 'axios'
 import { toast } from 'react-hot-toast'
 
 import { axiosInstance } from 'apis'
-import { TLoginRequest } from 'features/auth'
 
-export const loginRequest = async (data: TLoginRequest) => {
+export const logoutRequest = async () => {
   try {
-    await axiosInstance.post('/login', data)
+    await axiosInstance.post('/logout')
   } catch (error) {
     if (axios.isAxiosError(error)) {
       // Access to config, request, and response

@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import { useForm, SubmitHandler } from 'react-hook-form'
 
 import { useAuth } from '../hooks'
@@ -8,11 +9,7 @@ type Inputs = {
 }
 
 export const LoginForm = () => {
-  const {
-    register,
-    handleSubmit,
-    formState: { errors },
-  } = useForm<Inputs>()
+  const { register, handleSubmit } = useForm<Inputs>()
 
   const { login } = useAuth()
 

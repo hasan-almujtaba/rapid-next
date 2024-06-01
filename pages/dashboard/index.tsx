@@ -10,7 +10,7 @@ const Dashboard: NextPageWithLayout = () => {
         <title>Dashboard</title>
       </Head>
 
-      <p>protected</p>
+      <p>Protected Route</p>
     </>
   )
 }
