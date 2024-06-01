@@ -7,6 +7,7 @@ export const axiosInstance = axios.create({
   headers: {
     'X-Requested-With': 'XMLHttpRequest',
   },
-  withCredentials: true,
-  withXSRFToken: true,
 } as any)
+
+axiosInstance.defaults.withCredentials = true
+;(axiosInstance.defaults as any).withXSRFToken = true
