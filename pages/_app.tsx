@@ -5,6 +5,7 @@ import {
 } from '@tanstack/react-query'
 import { ReactQueryDevtools } from '@tanstack/react-query-devtools'
 import { useState } from 'react'
+import { Toaster } from 'react-hot-toast'
 
 import { AppPropsWithLayout } from 'types'
 
@@ -25,6 +26,7 @@ const App = ({ Component, pageProps }: AppPropsWithLayout) => {
   return (
     <QueryClientProvider client={queryClient}>
       <HydrationBoundary state={pageProps.dehydratedState}>
+        <Toaster />
         {getLayout(<Component {...pageProps} />)}
       </HydrationBoundary>
       <ReactQueryDevtools />
