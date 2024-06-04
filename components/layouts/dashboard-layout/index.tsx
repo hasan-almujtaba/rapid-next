@@ -48,7 +48,7 @@ const MobileSidebar = () => (
     <div className="flex h-16 shrink-0 items-center">
       <img
         className="h-8 w-auto"
-        src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
+        src="https://tailwindui.com/img/logos/mark.svg?color=slate&shade=600"
         alt="Your Company"
       />
     </div>
@@ -68,16 +68,16 @@ const MobileSidebar = () => (
                   href={item.href}
                   className={twMerge(
                     item.current
-                      ? 'bg-gray-50 text-indigo-600'
-                      : 'text-gray-700 hover:bg-gray-50 hover:text-indigo-600',
+                      ? 'bg-gray-50 text-slate-600'
+                      : 'text-gray-700 hover:bg-gray-50 hover:text-slate-600',
                     'group flex gap-x-3 rounded-md p-2 text-sm font-semibold leading-6'
                   )}
                 >
                   <item.icon
                     className={twMerge(
                       item.current
-                        ? 'text-indigo-600'
-                        : 'text-gray-400 group-hover:text-indigo-600',
+                        ? 'text-slate-600'
+                        : 'text-gray-400 group-hover:text-slate-600',
                       'h-6 w-6 shrink-0'
                     )}
                     aria-hidden="true"
@@ -102,16 +102,16 @@ const MobileSidebar = () => (
                   href={team.href}
                   className={twMerge(
                     team.current
-                      ? 'bg-gray-50 text-indigo-600'
-                      : 'text-gray-700 hover:bg-gray-50 hover:text-indigo-600',
+                      ? 'bg-gray-50 text-slate-600'
+                      : 'text-gray-700 hover:bg-gray-50 hover:text-slate-600',
                     'group flex gap-x-3 rounded-md p-2 text-sm font-semibold leading-6'
                   )}
                 >
                   <span
                     className={twMerge(
                       team.current
-                        ? 'border-indigo-600 text-indigo-600'
-                        : 'border-gray-200 text-gray-400 group-hover:border-indigo-600 group-hover:text-indigo-600',
+                        ? 'border-slate-600 text-slate-600'
+                        : 'border-gray-200 text-gray-400 group-hover:border-slate-600 group-hover:text-slate-600',
                       'flex h-6 w-6 shrink-0 items-center justify-center rounded-lg border bg-white text-[0.625rem] font-medium'
                     )}
                   >
@@ -126,10 +126,10 @@ const MobileSidebar = () => (
         <li className="mt-auto">
           <a
             href="#"
-            className="group -mx-2 flex gap-x-3 rounded-md p-2 text-sm font-semibold leading-6 text-gray-700 hover:bg-gray-50 hover:text-indigo-600"
+            className="group -mx-2 flex gap-x-3 rounded-md p-2 text-sm font-semibold leading-6 text-gray-700 hover:bg-gray-50 hover:text-slate-600"
           >
             <Cog6ToothIcon
-              className="h-6 w-6 shrink-0 text-gray-400 group-hover:text-indigo-600"
+              className="h-6 w-6 shrink-0 text-gray-400 group-hover:text-slate-600"
               aria-hidden="true"
             />
             Settings
@@ -147,7 +147,7 @@ const DesktopSidebar = () => (
       <div className="flex h-16 shrink-0 items-center">
         <img
           className="h-8 w-auto"
-          src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
+          src="https://tailwindui.com/img/logos/mark.svg?color=slate&shade=600"
           alt="Your Company"
         />
       </div>
@@ -167,16 +167,16 @@ const DesktopSidebar = () => (
                     href={item.href}
                     className={twMerge(
                       item.current
-                        ? 'bg-gray-50 text-indigo-600'
-                        : 'text-gray-700 hover:bg-gray-50 hover:text-indigo-600',
+                        ? 'bg-gray-50 text-slate-600'
+                        : 'text-gray-700 hover:bg-gray-50 hover:text-slate-600',
                       'group flex gap-x-3 rounded-md p-2 text-sm font-semibold leading-6'
                     )}
                   >
                     <item.icon
                       className={twMerge(
                         item.current
-                          ? 'text-indigo-600'
-                          : 'text-gray-400 group-hover:text-indigo-600',
+                          ? 'text-slate-600'
+                          : 'text-gray-400 group-hover:text-slate-600',
                         'h-6 w-6 shrink-0'
                       )}
                       aria-hidden="true"
@@ -201,16 +201,16 @@ const DesktopSidebar = () => (
                     href={team.href}
                     className={twMerge(
                       team.current
-                        ? 'bg-gray-50 text-indigo-600'
-                        : 'text-gray-700 hover:bg-gray-50 hover:text-indigo-600',
+                        ? 'bg-gray-50 text-slate-600'
+                        : 'text-gray-700 hover:bg-gray-50 hover:text-slate-600',
                       'group flex gap-x-3 rounded-md p-2 text-sm font-semibold leading-6'
                     )}
                   >
                     <span
                       className={twMerge(
                         team.current
-                          ? 'border-indigo-600 text-indigo-600'
-                          : 'border-gray-200 text-gray-400 group-hover:border-indigo-600 group-hover:text-indigo-600',
+                          ? 'border-slate-600 text-slate-600'
+                          : 'border-gray-200 text-gray-400 group-hover:border-slate-600 group-hover:text-slate-600',
                         'flex h-6 w-6 shrink-0 items-center justify-center rounded-lg border bg-white text-[0.625rem] font-medium'
                       )}
                     >
@@ -225,10 +225,10 @@ const DesktopSidebar = () => (
           <li className="mt-auto">
             <a
               href="#"
-              className="group -mx-2 flex gap-x-3 rounded-md p-2 text-sm font-semibold leading-6 text-gray-700 hover:bg-gray-50 hover:text-indigo-600"
+              className="group -mx-2 flex gap-x-3 rounded-md p-2 text-sm font-semibold leading-6 text-gray-700 hover:bg-gray-50 hover:text-slate-600"
             >
               <Cog6ToothIcon
-                className="h-6 w-6 shrink-0 text-gray-400 group-hover:text-indigo-600"
+                className="h-6 w-6 shrink-0 text-gray-400 group-hover:text-slate-600"
                 aria-hidden="true"
               />
               Settings
