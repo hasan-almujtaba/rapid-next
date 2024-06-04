@@ -2,11 +2,47 @@ import axios from 'axios'
 import toast from 'react-hot-toast'
 
 import { axiosInstance } from 'apis'
-import { TRegisterRequest } from 'features/auth'
+import { TLoginRequest, TRegisterRequest } from 'features/auth'
 
-export * from './get-user'
-export * from './login'
-export * from './logout'
+export const getUserRequest = async () => {
+  try {
+    const { data } = await axiosInstance.get('/api/user')
+
+    return data
+  } catch (error) {
+    if (axios.isAxiosError(error)) {
+      // Access to config, request, and response
+
+      return null
+    }
+  }
+}
+
+export const loginRequest = async (data: TLoginRequest) => {
+  try {
+    await axiosInstance.post('/login', data)
+  } catch (error) {
+    if (axios.isAxiosError(error)) {
+      // Access to config, request, and response
+      toast.error(error.response?.data.message)
+    } else {
+      // Just a stock error
+    }
+  }
+}
+
+export const logoutRequest = async () => {
+  try {
+    await axiosInstance.post('/logout')
+  } catch (error) {
+    if (axios.isAxiosError(error)) {
+      // Access to config, request, and response
+      toast.error(error.response?.data.message)
+    } else {
+      // Just a stock error
+    }
+  }
+}
 
 export const registerRequest = async (data: TRegisterRequest) => {
   try {
