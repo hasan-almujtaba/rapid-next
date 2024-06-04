@@ -4,6 +4,7 @@ import { axiosInstance } from 'apis'
 import {
   TLoginRequest,
   TRegisterRequest,
+  TUser,
   getUserRequest,
   loginRequest,
   logoutRequest,
@@ -17,7 +18,7 @@ export const useAuth = () => {
     data: user,
     isLoading,
     refetch,
-  } = useQuery({
+  } = useQuery<TUser>({
     queryKey: ['user'],
     queryFn: () => getUserRequest(),
     retry: false,
