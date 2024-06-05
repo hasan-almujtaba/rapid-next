@@ -30,7 +30,7 @@ import { useAuth } from 'features/auth'
 import { Layout } from 'types'
 
 const navigation = [
-  { name: 'Dashboard', href: '#', icon: HomeIcon, current: true },
+  { name: 'Dashboard', href: '/dashboard', icon: HomeIcon, current: true },
   { name: 'Team', href: '#', icon: UsersIcon, current: false },
   { name: 'Projects', href: '#', icon: FolderIcon, current: false },
   { name: 'Calendar', href: '#', icon: CalendarIcon, current: false },
@@ -64,7 +64,7 @@ const MobileSidebar = () => (
           >
             {navigation.map((item) => (
               <li key={item.name}>
-                <a
+                <Link
                   href={item.href}
                   className={twMerge(
                     item.current
@@ -83,7 +83,7 @@ const MobileSidebar = () => (
                     aria-hidden="true"
                   />
                   {item.name}
-                </a>
+                </Link>
               </li>
             ))}
           </ul>
@@ -163,7 +163,7 @@ const DesktopSidebar = () => (
             >
               {navigation.map((item) => (
                 <li key={item.name}>
-                  <a
+                  <Link
                     href={item.href}
                     className={twMerge(
                       item.current
@@ -182,7 +182,7 @@ const DesktopSidebar = () => (
                       aria-hidden="true"
                     />
                     {item.name}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -248,7 +248,7 @@ export function DashboardLayout({ children }: Layout) {
 
   useEffect(() => {
     if (!user && !isLoading) {
-      push('/')
+      push('/login')
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [user, isLoading])
@@ -381,7 +381,7 @@ export function DashboardLayout({ children }: Layout) {
                         <MenuItem>
                           {({ focus }) => (
                             <Link
-                              href="/profile"
+                              href="/dashboard/profile"
                               className={twMerge(
                                 focus ? 'bg-gray-50' : '',
                                 'block px-3 py-1 text-sm leading-6 text-gray-900'
