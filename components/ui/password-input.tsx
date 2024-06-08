@@ -5,7 +5,7 @@ import { useFormContext } from 'react-hook-form'
 
 type TProps = {
   label: string
-} & InputHTMLAttributes<HTMLInputElement>
+} & Omit<InputHTMLAttributes<HTMLInputElement>, 'type'>
 
 export const PasswordInput = (props: TProps) => {
   const { label, name = '', ...rest } = props

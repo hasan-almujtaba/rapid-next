@@ -58,13 +58,11 @@ export const RegisterForm = () => {
               <PasswordInput
                 label="Password"
                 name="password"
-                type="password"
               />
 
               <PasswordInput
                 label="Confirm Password"
                 name="password_confirmation"
-                type="password"
               />
 
               <Button
