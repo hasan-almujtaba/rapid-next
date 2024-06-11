@@ -18,7 +18,9 @@
           "features/*/*",
           "hooks/*",
           "types/*",
-          "utils/*"
+          "utils/*",
+          "../*",
+          "./*"
         ]
       }
     ],
