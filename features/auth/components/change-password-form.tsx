@@ -20,8 +20,7 @@ export const ChangePasswordForm = () => {
           Change password
         </h2>
         <p className="mt-1 text-sm leading-6 text-gray-400">
-          Update your password associated with your account. You need to login
-          back after changing your password.
+          Update your password associated with your account.
         </p>
       </div>
 

@@ -41,9 +41,15 @@ importers:
       next:
         specifier: 14.2.3
         version: 14.2.3(@babel/core@7.22.20)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      prop-types:
+        specifier: ^15.8.1
+        version: 15.8.1
       react:
         specifier: 18.3.1
         version: 18.3.1
+      react-avatar:
+        specifier: ^5.0.3
+        version: 5.0.3(@babel/runtime@7.23.7)(core-js-pure@3.37.1)(prop-types@15.8.1)(react@18.3.1)
       react-dom:
         specifier: 18.3.1
         version: 18.3.1(react@18.3.1)
@@ -1210,6 +1216,9 @@ packages:
     resolution: {integrity: sha512-kWWXztvZ5SBQV+eRgKFeh8q5sLuZY2+8WUIzlxWVTg+oGwY14qylx1KbKzHd8P6ZYkAg0xyIDU9JMHhyJMZ1jw==}
     engines: {node: '>=10'}
 
+  charenc@0.0.2:
+    resolution: {integrity: sha512-yrLQ/yVUFXkzg7EDQsPieE/53+0RlaWTs+wBrvW36cyilJ2SaDWfl4Yj7MtLTXleV9uEKefbAGUPv2/iWSooRA==}
+
   chokidar@3.5.3:
     resolution: {integrity: sha512-Dr3sfKRP6oTcjf2JmUmFJfeVMvXBdegxB0iVQ5eb2V10uFJUCAS8OByZdVAyVb8xXNz3GjjTgj9kLWsZTqE6kw==}
     engines: {node: '>= 8.10.0'}
@@ -1295,6 +1304,9 @@ packages:
   convert-source-map@2.0.0:
     resolution: {integrity: sha512-Kvp459HrV2FEJ1CAsi1Ku+MY3kasH19TFykTz2xWmMeq6bk2NU3XXvfJ+Q61m0xktWwt+1HSYf3JZsTms3aRJg==}
 
+  core-js-pure@3.37.1:
+    resolution: {integrity: sha512-J/r5JTHSmzTxbiYYrzXg9w1VpqrYt+gexenBE9pugeyhwPZTAEJddyiReJWsLO6uNQ8xJZFbod6XC7KKwatCiA==}
+
   create-jest@29.7.0:
     resolution: {integrity: sha512-Adz2bdH0Vq3F53KEMJOoftQFutWCukm6J24wbPWRO4k1kMY7gS7ds/uoJkNuV8wDCtWWnuwGcJwpWcih+zEW1Q==}
     engines: {node: ^14.15.0 || ^16.10.0 || >=18.0.0}
@@ -1303,6 +1315,9 @@ packages:
   cross-spawn@7.0.3:
     resolution: {integrity: sha512-iRDPJKUPVEND7dHPO8rkbOnPpyDygcDFtWjpeWNCgy8WP2rXcxXL8TskReQl6OrB2G7+UJrags1q15Fudc7G6w==}
     engines: {node: '>= 8'}
+
+  crypt@0.0.2:
+    resolution: {integrity: sha512-mCxBlsHFYh9C+HVpiEacem8FEBnMXgU9gy4zmNC+SXAZNB/1idgp/aulFJ4FgCi7GPEVbfyng092GqL2k2rmow==}
 
   css.escape@1.5.1:
     resolution: {integrity: sha512-YUifsXXuknHlUsmlgyY0PKzgPOr7/FjCePfHNt0jxm83wHZi44VDMQ7/fGNkjY3/jV1MC+1CmZbaHzugyeRtpg==}
@@ -1951,6 +1966,9 @@ packages:
     resolution: {integrity: sha512-gDYaKHJmnj4aWxyj6YHyXVpdQawtVLHU5cb+eztPGczf6cjuTdwve5ZIEfgXqH4e57An1D1AKf8CZ3kYrQRqYA==}
     engines: {node: '>= 0.4'}
 
+  is-buffer@1.1.6:
+    resolution: {integrity: sha512-NcdALwpXkTm5Zvvbk7owOUSvVvBKDgKP5/ewfXEznmQFfs4ZRmanOeKBTjRVjka3QFoN6XJ+9F3USqfHqTaU5w==}
+
   is-builtin-module@3.2.1:
     resolution: {integrity: sha512-BSLE3HnV2syZ0FK0iMA/yUGplUeMmNz4AW5fnTunbCIqZi4vG3WjJT9FHMy5D69xmAYBHXQhJdALdpwVxV501A==}
     engines: {node: '>=6'}
@@ -2018,6 +2036,9 @@ packages:
   is-regex@1.1.4:
     resolution: {integrity: sha512-kvRdxDsxZjhzUX07ZnLydzS1TU/TJlTUHHY4YLL87e37oUA49DfkLqgy+VjFocowy29cKvcSiu+kIv728jTTVg==}
     engines: {node: '>= 0.4'}
+
+  is-retina@1.0.3:
+    resolution: {integrity: sha512-/tCmbIETZwCd8uHWO+GvbRa7jxwHFHdfetHfiwoP0aN9UDf3prUJMtKn7iBFYipYhqY1bSTjur8hC/Dakt8eyw==}
 
   is-set@2.0.2:
     resolution: {integrity: sha512-+2cnTEZeY5z/iXGbLhPrOAaK/Mau5k5eXq9j14CpRTftq0pAJu2MwVRSZhyZWBzx3o6X795Lz6Bpb6R0GKf37g==}
@@ -2376,6 +2397,9 @@ packages:
   makeerror@1.0.12:
     resolution: {integrity: sha512-JmqCvUhmt43madlpFzG4BQzG2Z3m6tvQDNKdClZnO3VbIudJYmxsT0FNJMeiB2+JTSlTQTSbU8QdesVmwJcmLg==}
 
+  md5@2.3.0:
+    resolution: {integrity: sha512-T1GITYmFaKuO91vxyoQMFETst+O71VUPEU3ze5GNzDm0OWdP8v1ziTaAEPUr/3kLsY3Sftgz242A1SetQiDL7g==}
+
   merge-stream@2.0.0:
     resolution: {integrity: sha512-abv/qOcuPfk3URPfDzmZU1LKmuw8kT+0nIHvKrKgFrwifol/doWcdA4ZqsWQ8ENrFKkd67Mfpo/LovbIUsbt3w==}
 
@@ -2723,6 +2747,14 @@ packages:
 
   queue-microtask@1.2.3:
     resolution: {integrity: sha512-NuaNSa6flKT5JaSYQzJok04JzTL1CA6aGhv5rfLW3PgqA+M2ChpZQnAC8h8i4ZFkBS8X5RqkDBHA7r4hej3K9A==}
+
+  react-avatar@5.0.3:
+    resolution: {integrity: sha512-DNc+qkWH9QehSEZqHBhqpXWsPY+rU9W7kD68QFHfu8Atfsvx/3ML0DzAePgTUd96nCXQQ3KZMcC3LKYT8FiBIg==}
+    peerDependencies:
+      '@babel/runtime': '>=7'
+      core-js-pure: '>=3'
+      prop-types: ^15.0.0 || ^16.0.0
+      react: ^15.0.0 || ^16.0.0 || ^17.0.0 || ^18.0.0
 
   react-dom@18.3.1:
     resolution: {integrity: sha512-5m4nQKp+rZRb09LNH59GM4BxTh9251/ylbKIbpe7TpGxfJ+9kv6BLkLBXIjjspbgbnIBNqlI23tRnTWT0snUIw==}
@@ -4526,6 +4558,8 @@ snapshots:
 
   char-regex@1.0.2: {}
 
+  charenc@0.0.2: {}
+
   chokidar@3.5.3:
     dependencies:
       anymatch: 3.1.3
@@ -4603,6 +4637,8 @@ snapshots:
 
   convert-source-map@2.0.0: {}
 
+  core-js-pure@3.37.1: {}
+
   create-jest@29.7.0(@types/node@17.0.42):
     dependencies:
       '@jest/types': 29.6.3
@@ -4623,6 +4659,8 @@ snapshots:
       path-key: 3.1.1
       shebang-command: 2.0.0
       which: 2.0.2
+
+  crypt@0.0.2: {}
 
   css.escape@1.5.1: {}
 
@@ -5449,6 +5487,8 @@ snapshots:
       call-bind: 1.0.5
       has-tostringtag: 1.0.0
 
+  is-buffer@1.1.6: {}
+
   is-builtin-module@3.2.1:
     dependencies:
       builtin-modules: 3.3.0
@@ -5501,6 +5541,8 @@ snapshots:
     dependencies:
       call-bind: 1.0.5
       has-tostringtag: 1.0.0
+
+  is-retina@1.0.3: {}
 
   is-set@2.0.2: {}
 
@@ -6080,6 +6122,12 @@ snapshots:
     dependencies:
       tmpl: 1.0.5
 
+  md5@2.3.0:
+    dependencies:
+      charenc: 0.0.2
+      crypt: 0.0.2
+      is-buffer: 1.1.6
+
   merge-stream@2.0.0: {}
 
   merge2@1.4.1: {}
@@ -6399,6 +6447,15 @@ snapshots:
   querystringify@2.2.0: {}
 
   queue-microtask@1.2.3: {}
+
+  react-avatar@5.0.3(@babel/runtime@7.23.7)(core-js-pure@3.37.1)(prop-types@15.8.1)(react@18.3.1):
+    dependencies:
+      '@babel/runtime': 7.23.7
+      core-js-pure: 3.37.1
+      is-retina: 1.0.3
+      md5: 2.3.0
+      prop-types: 15.8.1
+      react: 18.3.1
 
   react-dom@18.3.1(react@18.3.1):
     dependencies:

@@ -2,8 +2,7 @@ import { FormProvider, useForm } from 'react-hook-form'
 
 import { Button } from 'components/ui/button'
 import { Input } from 'components/ui/input'
-
-import { useAuth } from '../hooks'
+import { useAuth } from 'features/auth'
 
 export const PersonalInformationForm = () => {
   const { user } = useAuth()
@@ -22,7 +21,7 @@ export const PersonalInformationForm = () => {
           Personal Information
         </h2>
         <p className="mt-1 text-sm leading-6 text-gray-400">
-          Use a permanent address where you can receive mail.
+          Use a permanent email address where you can receive mail.
         </p>
       </div>
 

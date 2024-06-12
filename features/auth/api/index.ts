@@ -29,6 +29,8 @@ export const loginRequest = async (data: TLoginRequest) => {
     if (axios.isAxiosError(error)) {
       // Access to config, request, and response
       toast.error(error.response?.data.message)
+
+      throw new Error(error.response?.data.message)
     } else {
       // Just a stock error
     }
