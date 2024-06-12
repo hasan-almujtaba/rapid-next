@@ -1,10 +1,14 @@
 import { useMutation, useQuery } from '@tanstack/react-query'
+import { UseFormReset } from 'react-hook-form'
+import toast from 'react-hot-toast'
 
 import { axiosInstance } from 'apis'
 import {
+  TChangePasswordRequest,
   TLoginRequest,
   TRegisterRequest,
   TUser,
+  changePasswordRequest,
   getUserRequest,
   loginRequest,
   logoutRequest,
@@ -57,5 +61,21 @@ export const useAuth = () => {
     registerMutate(data)
   }
 
-  return { csrf, login, user, isLoading, logout, register }
+  const { mutate: changePasswordMutate } = useMutation({
+    mutationFn: (data: TChangePasswordRequest) => changePasswordRequest(data),
+  })
+
+  const changePassword = (
+    data: TChangePasswordRequest,
+    reset: UseFormReset<TChangePasswordRequest>
+  ) => {
+    changePasswordMutate(data, {
+      onSuccess: (data) => {
+        reset()
+        toast.success(data.message)
+      },
+    })
+  }
+
+  return { csrf, login, user, isLoading, logout, register, changePassword }
 }

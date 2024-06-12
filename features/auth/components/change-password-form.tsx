@@ -1,28 +1,16 @@
-import { useMutation } from '@tanstack/react-query'
-import { useRouter } from 'next/router'
 import { FormProvider, useForm } from 'react-hook-form'
-import toast from 'react-hot-toast'
 
 import { Button } from 'components/ui/button'
 import { PasswordInput } from 'components/ui/password-input'
-import { changePasswordRequest, TChangePasswordRequest } from 'features/auth'
+import { TChangePasswordRequest, useAuth } from 'features/auth'
 
 export const ChangePasswordForm = () => {
-  const { push } = useRouter()
-
   const formMethods = useForm<TChangePasswordRequest>()
 
-  const { mutate } = useMutation({
-    mutationFn: (data: TChangePasswordRequest) => changePasswordRequest(data),
-    onSuccess: (data) => {
-      toast.success(data.message)
-      formMethods.reset()
-      push('/login')
-    },
-  })
+  const { changePassword } = useAuth()
 
   const onSubmit = formMethods.handleSubmit((data) => {
-    mutate(data)
+    changePassword(data, formMethods.reset)
   })
 
   return (
@@ -45,7 +33,7 @@ export const ChangePasswordForm = () => {
           <div className="grid grid-cols-1 gap-x-6 gap-y-8 sm:max-w-xl sm:grid-cols-6">
             <div className="col-span-full">
               <PasswordInput
-                label="Password"
+                label="Current Password"
                 name="current_password"
               />
             </div>
